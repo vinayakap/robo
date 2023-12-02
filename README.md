@@ -1,6 +1,11 @@
-1. **Install WSL2** following instructions [here](https://learn.microsoft.com/en-us/windows/wsl/install).
-2. Download XLaunch using [this link](https://excellmedia.dl.sourceforge.net/project/vcxsrv/vcxsrv/1.20.14.0/vcxsrv-64.1.20.14.0.installer.exe).
-3. Install Ubuntu 22.04 LTS from Microsoft Store and set up a username and password.
+# Install WSL2
+Follow instructions in this [official link](https://learn.microsoft.com/en-us/windows/wsl/install).
+# Install XLaunch
+Download XLaunch using [this link](https://excellmedia.dl.sourceforge.net/project/vcxsrv/vcxsrv/1.20.14.0/vcxsrv-64.1.20.14.0.installer.exe).
+
+# Install Ubuntu 22.04 LTS
+Available on  Microsoft Store 
+Set up a username and password.
 
 4. Set the following environment variables:
     ```bash
