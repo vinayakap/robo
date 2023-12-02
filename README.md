@@ -25,10 +25,18 @@
    ```
 
 8. Install ROS2:
-  ```sudo apt update``` 
-  ```sudo apt upgrade```
-  ```sudo apt install ros-iron-desktop```
-  ```sudo apt install ros-iron-ros-base```
+  ```bash 
+  sudo apt update
+  ``` 
+  ```bash
+   sudo apt upgrade
+   ```
+  ```bash
+   sudo apt install ros-iron-desktop
+    ```
+  ```bash 
+  sudo apt install ros-iron-ros-base
+  ```
 
 9. Set up the environment:
    ```bash
