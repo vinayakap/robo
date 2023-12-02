@@ -3,30 +3,38 @@
 3. Install Ubuntu 22.04 LTS from Microsoft Store and set up a username and password.
 
 4. Set the following environment variables:
-   a. `export GAZEBO_IP=127.0.0.1`
-   b. `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0`
-   c. `export LIBGL_ALWAYS_INDIRECT=0`
-
+    ```bash
+   export GAZEBO_IP=127.0.0.1
+   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+   export LIBGL_ALWAYS_INDIRECT=0
+    ```
 5. Go to [ROS Installation Documentation](http://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html) for detailed instructions or follow the steps below directly.
 
 6. Enable required repositories:
-   a. `sudo apt install software-properties-common`
-   b. `sudo add-apt-repository universe`
-   c. `sudo apt update && sudo apt install curl -y`
-   d. `sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg`
-   e. `echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null`
+   ```bash
+   sudo apt install software-properties-common
+   sudo add-apt-repository universe
+   sudo apt update && sudo apt install curl -y
+   sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+```
 
 7. Install development tools:
-   a. `sudo apt update && sudo apt install ros-dev-tools`
+   ```
+   sudo apt update && sudo apt install ros-dev-tools
+   ```
 
 8. Install ROS2:
-   a. `sudo apt update`
-   b. `sudo apt upgrade`
-   c. `sudo apt install ros-iron-desktop`
-   d. `sudo apt install ros-iron-ros-base`
-
+```bash
+  sudo apt update
+  sudo apt upgrade
+  sudo apt install ros-iron-desktop
+  sudo apt install ros-iron-ros-base
+```
 9. Set up the environment:
-   a. `source /opt/ros/iron/setup.bash`
+   ```bash
+   source /opt/ros/iron/setup.bash
+   ```
 
 10. Install Gazebo (from [official Gazebo tutorial](https://classic.gazebosim.org/tutorials?tut=install_ubuntu)):
     ```bash
