@@ -8,20 +8,22 @@ Available on  Microsoft Store
 Set up a username and password.
 
 ### Set the following environment variables:
-    ```bash
-    export GAZEBO_IP=127.0.0.1
-    ```
-    ```bash
-    export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-    ```
-    ```bash
-    export LIBGL_ALWAYS_INDIRECT=0
-    ```
-### ROS Installation Documentation
+
+```bash
+export GAZEBO_IP=127.0.0.1
+```
+```bash
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+```
+```bash 
+export LIBGL_ALWAYS_INDIRECT=0
+```
+
+### ROS Installation
 Go to [ROS Installation Documentation](http://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html) for detailed instructions 
 or follow the steps below directly.
 
-### Enable required repositories
+#### Enable required repositories
 ```bash
 sudo apt install software-properties-common
 ```
@@ -38,13 +40,13 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 ```
 
-### Install development tools
+#### Install development tools
 
 ```
 sudo apt update && sudo apt install ros-dev-tools
 ```
 
-### Install ROS2
+#### Install ROS2
 
 ```bash 
 sudo apt update
@@ -59,24 +61,25 @@ sudo apt install ros-iron-desktop
 sudo apt install ros-iron-ros-base
 ```
 
-### Set up the environment:
+#### Set up the environment:
 
 ```bash
 source /opt/ros/iron/setup.bash
 ```
 
 ### Install Gazebo
-[official Gazebo tutorial](https://classic.gazebosim.org/tutorials?tut=install_ubuntu)
 
-or
+Just following single command works
 
 ```bash
 curl -sSL http://get.gazebosim.org | sh
 ```
 
-### Run Gazebo
+For more details [official Gazebo tutorial](https://classic.gazebosim.org/tutorials?tut=install_ubuntu)
+
+#### Run Gazebo
     ```bash
     gazebo
     ```
 
-### Additional Steps or Notes
+## Additional Steps or Notes
